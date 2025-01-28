@@ -4,7 +4,11 @@ import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 import Image from "next/image";
-import imgHotWaterSystem from "@assets/img/photos/Heat_Pump1.jpg";
+import Link from "next/link";
+import imgHotWaterSystem2 from "@assets/img/productphotos/ema.webp";
+import imgHotWaterSystem3 from "@assets/img/productphotos/spt2.png";
+import imgHotWaterSystem1 from "@assets/img/productphotos/ecogenic.png";
+import heroBg from "@assets/img/banner/bg2.jpg";
 
 export default function HotWaterSystem() {
   return (
@@ -12,7 +16,15 @@ export default function HotWaterSystem() {
       <Header style_2={true} />
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section
+        className="hero-section"
+        style={{
+          backgroundImage: `url(${heroBg.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="container">
           <h1 className="hero-title">
             Revolutionize Your Home <br />
@@ -30,55 +42,63 @@ export default function HotWaterSystem() {
         <div className="container">
           <div className="flip-card-container">
             {/* Left Image */}
+
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <Image
-                    src={imgHotWaterSystem}
+                    src={imgHotWaterSystem1}
                     alt="Energy-Efficient System"
                     width={300}
                     height={300}
                     className="image"
                   />
                 </div>
+
                 <div className="flip-card-back">
-                  <h3 className="back-title">Energy-Efficient Systems</h3>
+                  <h3 className="back-title">ECOGENICA</h3>
                   <p className="back-description">
-                    Save money with our energy-efficient hot water solutions,
-                    designed for maximum performance.
+                    Leading the way in heating innovation. Ecogenica® Heat Pumps for a Sustainable Future
                   </p>
+                  <Link href="/ecogenica">
+                    <button className="learn-more-btn">Learn More</button>
+                  </Link>
                 </div>
               </div>
             </div>
+
 
             {/* Center Image */}
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <Image
-                    src={imgHotWaterSystem}
+                    src={imgHotWaterSystem2}
                     alt="Hot Water System"
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     className="image"
                   />
                 </div>
                 <div className="flip-card-back">
-                  <h3 className="back-title">Modern Hot Water Systems</h3>
+                  <h3 className="back-title">Emarald</h3>
                   <p className="back-description">
-                    Enjoy energy savings, top performance, and government
-                    rebates with our innovative hot water systems.
+                    Leading the way in heating innovation. Emarald Heat Pumps for a Sustainable Future.
                   </p>
+                  <Link href="/emarald">
+                    <button className="learn-more-btn">Learn More</button>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Right Image */}
+
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <Image
-                    src={imgHotWaterSystem}
+                    src={imgHotWaterSystem3}
                     alt="Eco-Friendly System"
                     width={300}
                     height={300}
@@ -86,45 +106,66 @@ export default function HotWaterSystem() {
                   />
                 </div>
                 <div className="flip-card-back">
-                  <h3 className="back-title">Eco-Friendly Systems</h3>
+                  <h3 className="back-title">SPT</h3>
                   <p className="back-description">
-                    Reduce your carbon footprint with our eco-friendly hot water
-                    systems that benefit both you and the planet.
+                    Leading the way in heating innovation. SPT Heat Pumps for a Sustainable Future.
                   </p>
+                  <Link href="/spt">
+                    <button className="learn-more-btn">Learn More</button>
+                  </Link>
                 </div>
               </div>
             </div>
+
           </div>
+          <br></br>
 
-          <h2 className="section-title">Why Choose Us?</h2>
-          <div className="cards-container">
-            <div className="glass-card">
-              <h3 className="card-title">LICENSED PROFESSIONALS</h3>
-              <p className="card-description">
-                All of our licensed professionals have been carefully selected
-                and rigorously trained, ensuring that you receive the best
-                experience. When you choose to work with us, know that you are
-                consistently choosing quality and excellence. Contact us to
-                learn more.
+
+          <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>How a Heat Pump Saves You Money</h2>
+          <div className="points-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2rem', padding: '1.5rem', backgroundColor: '#f9fafb', borderRadius: '12px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)' }}>
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
+              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Hot Pump Functioning</h3>
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+                Heat Pumps work a bit like a reverse refrigerator – transferring heat from the air, through a heat exchange system to heat your water; this is why they are often referred to as ‘air-source Heat Pumps’.
               </p>
             </div>
 
-            <div className="glass-card">
-              <h3 className="card-title">VIC AND NSW BENEFITS</h3>
-              <p className="card-description">
-                Get a new hot water system with significant rebates in Victoria
-                and NSW. Enjoy reduced energy consumption and lower bills
-                through the VEU and ESS programs. Save with top-tier,
-                eco-friendly products.
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
+              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Environmental and Financial Benefits</h3>
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+                By concentrating existing heat rather than creating it, Heat Pumps reduce greenhouse gas emissions and energy consumption, offering significant savings for households.
               </p>
             </div>
 
-            <div className="glass-card">
-              <h3 className="card-title">FIRST-RATE BRANDS</h3>
-              <p className="card-description">
-                Upgrade to an Emerald energy-efficient hot water system. Enjoy
-                significant energy savings and rebates in Victoria and NSW. Save
-                on energy bills with top-tier, eco-friendly products.
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
+              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Efficiency Compared to Other Systems</h3>
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+                Unlike solar systems, Heat Pumps don’t rely on sunlight and operate using electricity. However, they are about four times more efficient than conventional electric water heaters.
+              </p>
+            </div>
+          </div>
+          <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>How Does the Heat Pump Work?</h2>
+          <div className="points-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2rem', padding: '1.5rem', backgroundColor: '#f9fafb', borderRadius: '12px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)' }}>
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+               1 -Heat Pumps draw air in through a fan to an evaporator where the heat in the air is absorbed by a refrigerant.
+              </p>
+            </div>
+
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>         
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+              2 -The warm air turns the refrigerant from liquid to gas.
+              </p>
+            </div>
+
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>       
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+              3 -This hot vapor flows through a heat exchanger to heat the water and cool the refrigerant.
+              </p>
+            </div>
+            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>       
+              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
+              4 -The liquid refrigerant then flows into an expansion valve to reduce its pressure, allowing it to cool and enter the evaporator to repeat the cycle.
               </p>
             </div>
           </div>
@@ -136,7 +177,6 @@ export default function HotWaterSystem() {
       {/* Scoped CSS */}
       <style jsx>{`
         .hero-section {
-          background: linear-gradient(to bottom right, #38bdf8, #0ea5e9);
           color: white;
           text-align: center;
           padding: 4rem 2rem;
@@ -214,7 +254,7 @@ export default function HotWaterSystem() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: linear-gradient(to bottom right, #0ea5e9, #38bdf8);
+          background: linear-gradient(to bottom right,rgb(58, 201, 94),rgb(9, 255, 83));
           color: white;
           transform: rotateY(180deg);
           padding: 1rem;
@@ -229,6 +269,23 @@ export default function HotWaterSystem() {
           font-size: 0.9rem;
           line-height: 1.4;
         }
+          .learn-more-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  color:rgb(0, 255, 34);
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color:#fde047;
+  color: white;
+}
+
       `}</style>
     </Wrapper>
   );

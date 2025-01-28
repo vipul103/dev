@@ -15,7 +15,7 @@ import {RightArrowTwo} from "@svg/index";
 const award_data = [
   {
     id: "one",
-    topic: "FREE SHIPPING",
+    topic: "",
     title: "approved seller",
     data_src: award_img_1,
     subtitle: "new energy tech “",
@@ -23,7 +23,7 @@ const award_data = [
   },
   {
     id: "two",
-    topic: "FREE RETURN",
+    topic: "",
     title: "solar victoria",
     data_src: award_img_2,
     subtitle: "Runner Up - “ Decor of the week “",

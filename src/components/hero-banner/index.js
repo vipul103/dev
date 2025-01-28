@@ -130,9 +130,9 @@ import slider_img_1 from "@assets/img/slider/13/slider-1.png";
 import slider_img_2 from "@assets/img/slider/13/slider-1.png";
 import slider_img_3 from "@assets/img/slider/13/slider-1.png";
 import slider_img_4 from "@assets/img/slider/13/slider-4.png";
-import slider_img_5 from "@assets/img/slider/13/slider-5.png";
+import slider_img_5 from "@assets/img/slider/13/slider-0.png";
 import { RightArrow } from "@svg/index";
-
+import solarbg from "@assets/img/banner/solarbg.png"; 
 const slider_data = [
   {
     id: 3,
@@ -143,7 +143,7 @@ const slider_data = [
     ),
     title: (
       <>
-        WE CAN SAVE <br />AU
+        WE CAN SAVE 
       </>
     ),
     img: slider_img_5,
@@ -167,7 +167,13 @@ const HeroBanner = () => {
           {slider_data.map((item) => (
             <SwiperSlide
               key={item.id}
-              className="slider__item-13 slider__height-13 grey-bg-17 d-flex align-items-end"
+              className="slider__item-13 slider__height-13 d-flex align-items-end"
+              style={{
+                backgroundImage: `url(${solarbg.src})`, // Add the background image here
+                backgroundSize: "cover", // Ensures the image covers the container
+                backgroundPosition: "center", // Centers the image
+                backgroundRepeat: "no-repeat", // Prevents the image from repeating
+              }}
             >
               <div className="container">
                 <div className="row align-self-end">
@@ -179,8 +185,8 @@ const HeroBanner = () => {
                       <h3 className="slider__title-13">{item.title}</h3>
 
                       <div className="slider__btn-13 ">
-                        <Link href="/shop" className="tp-btn-border">
-                          Shop Now
+                        <Link href="/offer-product" className="tp-btn-border">
+                          Our Services
                           <span>
                             <RightArrow />
                           </span>

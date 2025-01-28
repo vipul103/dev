@@ -220,7 +220,7 @@ const Brands = () => {
   return (
     <>
       <section className={`brand__area pb-120`}>
-        <div className="container-fluid g-0">
+        <div className="container-fluid g-0 ">
           <div className="row gx-0 gy-2">
             <div className="col-xxl-12">
               <div className={`brand__slider-5`}>

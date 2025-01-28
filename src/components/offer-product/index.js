@@ -88,8 +88,8 @@
 "use client";
 import Image from "next/image";
 import img1 from "@assets/img/photos/Heat_Pump1.jpg";
-import img2 from "@assets/img/photos/Heat_Pump1.jpg";
-import img3 from "@assets/img/photos/Heat_Pump1.jpg";
+import img2 from "@assets/img/photos/14.webp";
+import img3 from "@assets/img/slider/13/contact.jpg";
 import React, { useState } from "react";
 
 const SquareImages = () => {
@@ -153,27 +153,29 @@ const SquareImages = () => {
       <style jsx>{`
         .flex-container {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           width: 100%;
-          height: 60vh;
-          perspective: 1000px;
+          height: auto;
         }
 
         .image-wrapper {
           position: relative;
-          flex: 1;
-          height: 100%;
+          width: 100%;
+          height: 50vh;
           overflow: hidden;
           display: flex;
           justify-content: center;
           align-items: center;
           transition: transform 0.5s ease, box-shadow 0.5s ease;
-          transform-style: preserve-3d;
+          filter: grayscale(80%);
         }
 
         .image-wrapper:hover,
         .image-wrapper.hovered {
-          transform: rotateY(10deg) scale(1.1);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          transform: scale(1.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+          filter: grayscale(0%);
         }
 
         .overlay {
@@ -187,7 +189,6 @@ const SquareImages = () => {
           justify-content: center;
           align-items: center;
           color: white;
-          transform: translateZ(50px);
         }
 
         .image-wrapper:hover .overlay,
@@ -203,11 +204,22 @@ const SquareImages = () => {
           font-size: 24px;
           font-weight: bold;
           margin: 0;
+          color: #ffffff;
         }
 
         .text p {
           margin: 8px 0 0;
           font-size: 14px;
+          color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+          .flex-container {
+            flex-direction: row;
+          }
+          .image-wrapper {
+            width: 33.33%;
+          }
         }
       `}</style>
     </div>
@@ -215,6 +227,8 @@ const SquareImages = () => {
 };
 
 export default SquareImages;
+
+
 
 
 

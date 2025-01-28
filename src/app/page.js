@@ -21,10 +21,12 @@ const HomeShop = () => {
     <Wrapper>
       <Header />
       <HeroBanner />
+      <ShopProducts />
       <OfferPopularProduct />
       <ShopFeature />
       <ShopCta />
       <Brands />
+      <ShopBanner />
       <Footer />
     </Wrapper>
   );

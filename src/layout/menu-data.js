@@ -17,8 +17,8 @@ const menu_data = [
     submenus: [
       { title: 'Hot Water System', link: '/hotwater' },
       { title: 'Air Conditioner', link: '/ac' },
-      { title: 'Solar Panel ', link: '/solar-panel' },
-      { title: 'Commercial Hot Water', link: '/hot-water-commercial' },
+      // { title: 'Solar Panel ', link: '/solar-panel' },
+      // { title: 'Commercial Hot Water', link: '/hot-water-commercial' },
     ]
   },
   {

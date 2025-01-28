@@ -50,7 +50,7 @@ const Footer = () => {
                     <div className="footer__widget-content">
                       <div className="footer__info">
                         <p>
-                        Green Energy Power Co is a trusted leader in energy-efficient heating, cooling, solar panels, inverters, and hot water systems, operating under the VEU Program in Melbourne, Australia.
+                        We can save is a trusted leader in energy-efficient heating, cooling, solar panels, inverters, and hot water systems, operating under the VEU Program in Melbourne, Australia.
                         </p>
                         <div className="footer__social footer__social-11">
                           <SocialLinks/>
@@ -66,24 +66,23 @@ const Footer = () => {
                   col_3="2"
                   title="Company"
                   contents={[
+                    { url: "#", title: "Home" },
                     { url: "#", title: "About us" },
-                    { url: "#", title: "Careers" },
-                    { url: "#", title: "Store Locations" },
-                    { url: "#", title: "Our Blog" },
-                    { url: "#", title: "Reviews" },
+                    { url: "#", title: "Our Product" },
+                    { url: "#", title: "FAQs" },
+                    { url: "#", title: "Contact Us" },
                   ]}
                 />
                 <SingleWidget
                   col="3"
                   col_2="3"
                   col_3="3"
-                  title="Shop"
+                  title="Product"
                   contents={[
-                    { url: "#", title: "Game & Video" },
-                    { url: "#", title: "Phone &Tablets" },
-                    { url: "#", title: "Computers & Laptop" },
-                    { url: "#", title: "Sport Watches" },
-                    { url: "#", title: "Discounts" },
+                    { url: "#", title: "Hot Water System" },
+                    { url: "#", title: "Air Conditioner" },
+                    // { url: "#", title: "Solar Panel" },
+                    // { url: "#", title: "Commercial Hot Water System" },
                   ]}
                 />
                 <SingleWidget
@@ -93,10 +92,7 @@ const Footer = () => {
                   title="Support"
                   contents={[
                     { url: "", title: "FAQs" },
-                    { url: "", title: "Reviews" },
                     { url: "", title: "Contact Us" },
-                    { url: "", title: "Shipping" },
-                    { url: "", title: "Returns" },
                   ]}
                 />
 
