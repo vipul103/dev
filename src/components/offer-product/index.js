@@ -87,7 +87,7 @@
 
 "use client";
 import Image from "next/image";
-import img1 from "@assets/img/photos/1.jpg";
+import img1 from "@assets/img/photos/heat.jpg";
 import img2 from "@assets/img/photos/14.webp";
 import img3 from "@assets/img/slider/13/contact.jpg";
 import React, { useState } from "react";
