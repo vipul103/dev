@@ -135,7 +135,7 @@ import ShopCta from "@components/cta";
 // Internal assets
 import img1 from "@assets/img/photos/soa.webp";
 import img2 from "@assets/img/photos/air.png";
-import img3 from "@assets/img/photos/heat_pump1.jpg";
+import img3 from "@assets/img/photos/1.jpg";
 import img4 from "@assets/img/photos/ss.webp";
 
 export default function ShopMainArea() {

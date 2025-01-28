@@ -2,7 +2,7 @@ import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 import Image from "next/image";
-import imgHotWaterSystem from "@assets/img/photos/Heat_Pump1.jpg";
+import imgHotWaterSystem from "@assets/img/photos/1.jpg";
 
 export const metadata = {
   title: "Hot Water System",
