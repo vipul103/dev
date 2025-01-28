@@ -209,9 +209,6 @@ const HeroBanner = () => {
                           src={item.img}
                           alt="slider img"
                           priority
-                          width={300} 
-                          height={300} 
-                          style={{ objectFit: "contain" }} 
                         />
                       </div>
                     </div>
