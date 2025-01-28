@@ -132,7 +132,8 @@ import slider_img_3 from "@assets/img/slider/13/slider-1.png";
 import slider_img_4 from "@assets/img/slider/13/slider-4.png";
 import slider_img_5 from "@assets/img/slider/13/slider-7.png";
 import { RightArrow } from "@svg/index";
-import solarbg from "@assets/img/banner/solarbg.png"; 
+import solarbg from "@assets/img/banner/solarbg.png";
+
 const slider_data = [
   {
     id: 3,
@@ -143,7 +144,7 @@ const slider_data = [
     ),
     title: (
       <>
-        WE CAN SAVE 
+        WE CAN SAVE
       </>
     ),
     img: slider_img_5,
@@ -153,8 +154,20 @@ const slider_data = [
 const HeroBanner = () => {
   const [loop, setLoop] = useState(false);
   useEffect(() => setLoop(true), []);
+
   return (
     <>
+      <style jsx>{`
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
+
       <section className="slider__area">
         <Swiper
           className="slider__active slider__active-13 swiper-container"
@@ -169,10 +182,10 @@ const HeroBanner = () => {
               key={item.id}
               className="slider__item-13 slider__height-13 d-flex align-items-end"
               style={{
-                backgroundImage: `url(${solarbg.src})`, // Add the background image here
-                backgroundSize: "cover", // Ensures the image covers the container
-                backgroundPosition: "center", // Centers the image
-                backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                backgroundImage: `url(${solarbg.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               <div className="container">
@@ -184,7 +197,7 @@ const HeroBanner = () => {
                       </span>
                       <h3 className="slider__title-13">{item.title}</h3>
 
-                      <div className="slider__btn-13 ">
+                      <div className="slider__btn-13">
                         <Link href="/offer-product" className="tp-btn-border">
                           Our Services
                           <span>
@@ -202,13 +215,17 @@ const HeroBanner = () => {
                         style={{
                           position: "relative",
                           display: "inline-block",
-                          transform: "translate( 140px, -70px)", // Adjust these values for precise centering
+                          transform: "translate(140px, -70px)",
+                          animation: "spin 5s linear infinite", // Add the rotation animation here
                         }}
                       >
                         <Image
                           src={item.img}
                           alt="slider img"
                           priority
+                          width={300}
+                          height={300}
+                          style={{ objectFit: "contain" }}
                         />
                       </div>
                     </div>
