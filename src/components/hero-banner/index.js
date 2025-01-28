@@ -130,7 +130,7 @@ import slider_img_1 from "@assets/img/slider/13/slider-1.png";
 import slider_img_2 from "@assets/img/slider/13/slider-1.png";
 import slider_img_3 from "@assets/img/slider/13/slider-1.png";
 import slider_img_4 from "@assets/img/slider/13/slider-4.png";
-import slider_img_5 from "@assets/img/slider/13/slider-0.png";
+import slider_img_5 from "@assets/img/slider/13/slider-7.png";
 import { RightArrow } from "@svg/index";
 import solarbg from "@assets/img/banner/solarbg.png"; 
 const slider_data = [
