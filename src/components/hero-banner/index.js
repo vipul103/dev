@@ -127,21 +127,14 @@ import { EffectFade } from "swiper";
 // internal
 import slider_img_5 from "@assets/img/slider/13/slider-6.png";
 import { RightArrow } from "@svg/index";
-import solarbg from "@assets/img/banner/solarbg.png";
+import solarbg from "@assets/img/banner/gbb.jpg";
+
 
 const slider_data = [
   {
     id: 3,
-    pre_title: (
-      <>
-        Conserve  Energy
-      </>
-    ),
-    title: (
-      <>
-        WE CAN SAVE
-      </>
-    ),
+    pre_title: <>Conserve Energy</>,
+    title: <>WE CAN SAVE</>,
     img: slider_img_5,
   },
 ];
@@ -166,12 +159,14 @@ const HeroBanner = () => {
         .slider__thumb-13-circle-2 {
           position: absolute;
           right: 4%;
-          top: -21%
+          top: -21%;
         }
+          
 
         .slider__title-pre-13 {
           font-size: 2rem; /* Default for larger screens */
           line-height: 1.2;
+          color: black;
         }
 
         .slider__title-13 {
@@ -236,16 +231,35 @@ const HeroBanner = () => {
             key={item.id}
             className="slider__item-13 d-flex"
             style={{
-              backgroundImage: `url(${solarbg.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
+              position: "relative",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              minHeight: "100vh", // Full height for the viewport
+              minHeight: "100vh",
+              overflow: "hidden", // Prevents scrolling issues
             }}
           >
+            {/* Background Video */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1,
+              }}
+            >
+              <source src="/videos/bgvideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+
             <div className="container text-center px-4">
               <div className="row align-items-center">
                 <div className="col-xl-6 col-lg-6 col-md-12">

@@ -87,10 +87,11 @@
 
 "use client";
 import Image from "next/image";
-import img1 from "@assets/img/photos/heat.jpg";
+import img1 from "@assets/img/photos/Heat.jpg";
 import img2 from "@assets/img/photos/14.webp";
 import img3 from "@assets/img/slider/13/contact.jpg";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const SquareImages = () => {
   const [hovered, setHovered] = useState(null);
@@ -111,6 +112,7 @@ const SquareImages = () => {
         onMouseEnter={() => handleMouseEnter("img1")}
         onMouseLeave={handleMouseLeave}
       >
+        <Link href = "/hotwater">
         <Image src={img1} alt="Hot Water Rebate" layout="fill" objectFit="cover" />
         <div className="overlay">
           <div className="text">
@@ -118,6 +120,7 @@ const SquareImages = () => {
             <p>UP TO 70% LESS ENERGY</p>
           </div>
         </div>
+        </Link>
       </div>
 
       {/* Image 2 */}
@@ -126,6 +129,7 @@ const SquareImages = () => {
         onMouseEnter={() => handleMouseEnter("img2")}
         onMouseLeave={handleMouseLeave}
       >
+        <Link href = "/ac">
         <Image src={img2} alt="Aircon Rebate" layout="fill" objectFit="cover" />
         <div className="overlay">
           <div className="text">
@@ -133,6 +137,7 @@ const SquareImages = () => {
             <p>GOVERNMENT INITIATIVE</p>
           </div>
         </div>
+        </Link>
       </div>
 
       {/* Image 3 */}
@@ -141,6 +146,7 @@ const SquareImages = () => {
         onMouseEnter={() => handleMouseEnter("img3")}
         onMouseLeave={handleMouseLeave}
       >
+        <Link href = "/contact">
         <Image src={img3} alt="Contact Us" layout="fill" objectFit="cover" />
         <div className="overlay">
           <div className="text">
@@ -148,6 +154,7 @@ const SquareImages = () => {
             <p>REDUCE YOUR ELECTRICITY BILLS</p>
           </div>
         </div>
+        </Link>
       </div>
 
       <style jsx>{`
