@@ -132,7 +132,7 @@ import solarbg from "@assets/img/banner/gbb.jpg";
 
 const slider_data = [
   {
-    id: 3,
+    id: 1,
     pre_title: <>Conserve Energy</>,
     title: <>WE CAN SAVE</>,
     img: slider_img_5,
@@ -146,76 +146,131 @@ const HeroBanner = () => {
   return (
     <section className="slider__area">
       <style jsx>{`
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-        .slider__thumb-13-circle-1,
-        .slider__thumb-13-circle-2 {
-          position: absolute;
-          right: 4%;
-          top: -21%;
-        }
-          
+.slider__thumb-13-circle-1,
+.slider__thumb-13-circle-2 {
+  position: absolute;
+  right: 4%;
+  top: -21%;
+}
 
-        .slider__title-pre-13 {
-          font-size: 2rem; /* Default for larger screens */
-          line-height: 1.2;
-          color: black;
-        }
+.slider__title-pre-13 {
+  font-size: 2rem; /* Default for larger screens */
+  line-height: 1.2;
+  color: black;
+}
 
-        .slider__title-13 {
-          font-size: 3rem; /* Default for larger screens */
-          font-weight: bold;
-        }
+.slider__title-13 {
+  font-size: 3rem; /* Default for larger screens */
+  font-weight: bold;
+}
 
-        @media (max-width: 768px) {
-          .slider__item-13 {
-            padding: 20px;
-          }
+@media (max-width: 768px) {
+  .slider__item-13 {
+    padding: 20px;
+  }
 
-          .slider__title-pre-13 {
-            font-size: 1.5rem; /* Reduce font size for tablets */
-          }
+  .slider__title-pre-13 {
+    font-size: 1.5rem; /* Reduce font size for tablets */
+  }
 
-          .slider__title-13 {
-            font-size: 2rem; /* Reduce font size for tablets */
-          }
+  .slider__title-13 {
+    font-size: 2rem; /* Reduce font size for tablets */
+  }
 
-          .slider__thumb-13 {
-            margin-top: 20px;
-          }
+  .slider__thumb-13 {
+    margin-top: 20px;
+  }
 
-          .slider__thumb-13-circle-1 {
-            top: -10px; /* Adjust circle position for mobile */
-            right: 10%; /* Adjust position */
-          }
+  /* Hide circles on screens smaller than laptop */
+  .slider__thumb-13-circle-1,
+  .slider__thumb-13-circle-2 {
+    display: none;
+  }
+}
+  @media (min-width: 200px) {
+  .slider__thumb-13-circle-1,
+  .slider__thumb-13-circle-2 {
+    display: none; /* Keep circles visible on laptop and larger screens */
+  }
+}
 
-          .slider__thumb-13-circle-2 {
-            bottom: -10px; /* Adjust circle position for mobile */
-            right: 8%;
-          }
-        }
+/* Only display circles on laptop and above (1024px and larger screens) */
+@media (mix-width: 1366px) {
+  .slider__thumb-13-circle-1,
+  .slider__thumb-13-circle-2 {
+    display: none; /* Keep circles visible on laptop and larger screens */
+  }
+}
+  @media (min-width: 1366px) {
+  .slider__thumb-13-circle-1,
+  .slider__thumb-13-circle-2 {
+    display: none; /* Keep circles visible on laptop and larger screens */
+  }
+}
 
-        @media (max-width: 480px) {
-          .slider__title-pre-13 {
-            font-size: 1.2rem; /* Further reduce font size for mobile */
-          }
+@media (max-width: 480px) {
+  .slider__title-pre-13 {
+    font-size: 1.2rem; /* Further reduce font size for mobile */
+  }
 
-          .slider__title-13 {
-            font-size: 1.8rem; /* Further reduce font size for mobile */
-          }
+  .slider__title-13 {
+    font-size: 1.8rem; /* Further reduce font size for mobile */
+  }
 
-          .slider__thumb-13 img {
-            width: 180px;
-            height: 180px;
-          }
-        }
+  .slider__thumb-13 img {
+    width: 180px;
+    height: 180px;
+  }
+}
+  @media (max-width: 800px) {
+  .slider__thumb-13-circle-1,
+  .slider__thumb-13-circle-2 {
+    display: none;
+  }
+}
+  @media (max-width: 480px) {
+  .slider__title-pre-13 {
+    font-size: 1rem; /* Reduce font size for small screens */
+    white-space: normal; /* Ensure text wraps instead of cutting */
+    word-wrap: break-word; /* Break long words if necessary */
+    text-align: center; /* Center align for better readability */
+    margin-bottom: 10px; /* Add space between headings */
+  }
+
+  .slider__title-13 {
+    font-size: 1.5rem; /* Reduce main title size */
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slider__content-13 {
+    padding-top: 120px; /* Increase top padding for more separation */
+    text-align: center;
+
+  .slider__item-13 {
+    overflow: hidden; /* Ensure content does not get cut off */
+    min-height: auto; /* Adjust height dynamically */
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+}
+  @media (max-width: 480px) {
+  .slider__content-13 {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+  }
+}
+
+
+
+
       `}</style>
 
       <Swiper
@@ -310,5 +365,6 @@ const HeroBanner = () => {
     </section>
   );
 };
+
 
 export default HeroBanner;
