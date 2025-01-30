@@ -310,7 +310,7 @@ const HeroBanner = () => {
                 zIndex: -1,
               }}
             >
-              <source src="/videos/bgvideo.mp4" type="video/mp4" />
+              <source src="/videos/bgvideo.mp4" type="video/mp4" muted />
               Your browser does not support the video tag.
             </video>
 
