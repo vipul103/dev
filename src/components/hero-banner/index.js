@@ -141,8 +141,20 @@ const slider_data = [
 
 const HeroBanner = () => {
   const [loop, setLoop] = useState(false);
-  useEffect(() => setLoop(true), []);
 
+  useEffect(() => {
+    setLoop(true);
+
+    // Force autoplay on Safari
+    const video = document.querySelector("video");
+    if (video) {
+      video.muted = true; // Ensure muted
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.play().catch(() => console.warn("Safari blocked autoplay"));
+    }
+  }, []);
   return (
     <section className="slider__area">
       <style jsx>{`
