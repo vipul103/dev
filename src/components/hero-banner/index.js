@@ -141,20 +141,35 @@ const slider_data = [
 
 const HeroBanner = () => {
   const [loop, setLoop] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     setLoop(true);
 
     // Force autoplay on Safari
-    const video = document.querySelector("video");
-    if (video) {
-      video.muted = true; // Ensure muted
-      video.setAttribute("muted", "");
-      video.setAttribute("playsinline", "");
-      video.setAttribute("webkit-playsinline", "");
-      video.play().catch(() => console.warn("Safari blocked autoplay"));
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.setAttribute("muted", "");
+      videoRef.current.setAttribute("playsinline", "");
+      videoRef.current.setAttribute("webkit-playsinline", "");
+      videoRef.current.play().catch(() => console.warn("Safari blocked autoplay"));
+
+      // Ensure seamless looping by resetting time slightly before end
+      videoRef.current.addEventListener("timeupdate", () => {
+        if (videoRef.current.currentTime >= videoRef.current.duration - 0.2) {
+          videoRef.current.currentTime = 0.1; // Reset a little before start
+          videoRef.current.play();
+        }
+      });
     }
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener("timeupdate", () => {});
+      }
+    };
   }, []);
+
   return (
     <section className="slider__area">
       <style jsx>{`
@@ -279,6 +294,7 @@ const HeroBanner = () => {
     padding-top: 80px; /* Adjust this value based on your navbar height */
   }
 }
+  
 
 
 
