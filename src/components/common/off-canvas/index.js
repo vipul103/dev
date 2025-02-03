@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 // internal
 import shape from "@assets/img/shape/offcanvas-shape-1.png";
-import logo from "@assets/img/logo/logo-black.svg";
+import logo from "@assets/img/logo/gr.png";
 import MobileMenus from "./mobile-menus";
 import SocialLinks from "@components/social";
 
@@ -31,7 +31,17 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }) => {
             <div className="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
               <div className="offcanvas__logo logo">
                 <Link href="/">
-                  <Image src={logo} alt="logo" />
+                <Image 
+                    src={logo} 
+                    alt="logo"
+                    width={92}
+                    height={92}
+                    style={{
+                      width: '92px',
+                      height: '92px',
+                      objectFit: 'contain'
+                    }}
+                  />
                 </Link>
               </div>
             </div>
@@ -53,10 +63,10 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }) => {
             </div>
             <div className="offcanvas__contact">
               <p className="offcanvas__contact-call">
-                <a href="tel:+964-742-44-763">+964 742 44 763</a>
+                <a href="tel:+964-742-44-763">+1300785436</a>
               </p>
               <p className="offcanvas__contact-mail">
-                <a href="mailto:info@harry.com">info@harry.com</a>
+                <a href="mailto:support@greenenergypowerco.com">support@greenenergypowerco.com</a>
               </p>
             </div>
           </div>
@@ -71,5 +81,6 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }) => {
     </React.Fragment>
   );
 };
+
 
 export default OffCanvas;

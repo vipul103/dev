@@ -7,67 +7,30 @@ const PolicyArea = () => {
           <div className="col-xl-10">
             <div className="policy__wrapper policy__translate p-relative z-index-1">
               <div className="policy__item mb-35">
-                <h4 className="policy__meta">Effective date: May 25, 2023</h4>
+              <h3 className="policy__title">Privacy Policy</h3>
                 <p>
-                  Harry knows that you care about how your personal information
-                  is used and shared, and Harry takes your privacy seriously.
-                  Please read the following to learn more about Harry Privacy
-                  Policy (“Privacy Policy”). This Privacy Policy also tells you
-                  about your rights and choices with respect to your Personal
-                  Information, and how you can reach us to update your contact
-                  information or get answers to questions you may have about our
-                  privacy practices.
+                At AUSTRALIA HOME IMPROVEMENT, we understand the importance of privacy and security. Our privacy policy outlines how we utilize and safeguard your personal data
                 </p>
                 <p>
-                  By using or accessing the Services in any manner, you
-                  acknowledge that you accept the practices and policies
-                  outlined in this Privacy Policy, and you hereby consent that
-                  Harry will collect, use, and share your information in the
-                  following ways. Remember that your use of Services is at all
-                  times subject to the Terms as set forth at
-                  https://harry.com/legal/terms, which incorporate this Privacy
-                  Policy. Any terms Harry uses in this Privacy Policy without
-                  defining them have the definitions given to them in the Terms.
+                We utilize trusted third-party financial institutions for payment verification and only collect essential user information for order fulfillment purposes.
+                 Rest assured, your privacy is our utmost priority.
                 </p>
               </div>
 
               <div className="policy__item policy__item-2 mb-35">
-                <h3 className="policy__title">Information Collection</h3>
+                <h3 className="policy__title">Customer Service</h3>
                 <p>
-                  You can visit and enjoy our Website without disclosing any
-                  Personal Information about yourself. However, for the Service
-                  to work properly we will need you to share with us certain
-                  Personal Information.
+                Welcome to AUSTRALIA HOME IMPROVEMENT, your one-stop shop for all your home improvement, air conditioner, hot water systems, and energy saving solutions needs.
+                 Our customer service is dedicated to providing you with detailed information about our products and services. Feel free to reach out to us for any inquiries or assistance.
                 </p>
 
                 <p>
-                  For the purposes of this Privacy Policy, “Personal
-                  Information” means information that identifies, relates to,
-                  describes, is reasonably capable of being associated with, or
-                  could be reasonably linked, directly or indirectly, with a
-                  particular consumer, device or household. It does not include
-                  de-identified or aggregate information, or public information
-                  lawfully available from governmental records.
+                At AUSTRALIA HOME IMPROVEMENT, we prioritize the privacy and security of our customers. We have strict policies in place to ensure that your personal information is protected.
+                 Our commitment to transparency and security aims to build trust and confidence in every purchase you make with us.
                 </p>
               </div>
 
-              <div className="policy__list mb-35">
-                <h3 className="policy__title">Use of Personal Information</h3>
-                <ul>
-                  <li>To provide and maintain the Service;</li>
-                  <li>To detect, prevent and address technical issues;</li>
-                  <li>
-                    To register you as a user and to provide the services you
-                    require;
-                  </li>
-                  <li>
-                    To decide whether to offer you a Capchase product or
-                    service;
-                  </li>
-                  <li>To notify you about changes to our Service;</li>
-                  <li>To provide customer care and support;</li>
-                </ul>
-              </div>
+              
               <div className="policy__contact">
                 <h3 className="policy__title policy__title-2">Contact us</h3>
                 <p>You may contact us at any time via:</p>
@@ -76,7 +39,7 @@ const PolicyArea = () => {
                   <li>
                     Email:{" "}
                     <span>
-                      <a href="mailto:harry.com">support@harry.com</a>
+                      <a href="mailto:harry.com">wecansaveau@gmail.com</a>
                     </span>
                   </li>
                 </ul>

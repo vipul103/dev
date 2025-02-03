@@ -90,10 +90,10 @@ import Image from "next/image";
 import img1 from "@assets/img/photos/heat.jpg";
 import img2 from "@assets/img/photos/14.webp";
 import img3 from "@assets/img/slider/13/contact.jpg";
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import Link from "next/link";
 
-const SquareImages = () => {
+const SquareImages = forwardRef((props, ref) => {
   const [hovered, setHovered] = useState(null);
 
   const handleMouseEnter = (id) => {
@@ -105,6 +105,7 @@ const SquareImages = () => {
   };
 
   return (
+    <section ref={ref} className="offer-section">
     <div className="flex-container">
       {/* Image 1 */}
       <div
@@ -230,8 +231,10 @@ const SquareImages = () => {
         }
       `}</style>
     </div>
+    </section>
   );
-};
+});
+SquareImages.displayName = "SquareImages";
 
 export default SquareImages;
 

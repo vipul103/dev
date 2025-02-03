@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 // internal
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
@@ -12,18 +13,26 @@ import ShopCta from "@components/cta";
 import Footer from "@layout/footer";
 import Brands from "@components/brands";
 
-export const metadata = {
-  title: "Home - Harri Shop"
-};
+
 
 const HomeShop = () => {
+  const offerProductRef = useRef(null);
+
+  const handleScrollToOffer = () => {
+    if (offerProductRef.current) {
+      offerProductRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <Wrapper>
       <Header />
-      <HeroBanner />
+      <HeroBanner  onButtonClick={handleScrollToOffer}/>
       <ShopProducts />
-      <OfferPopularProduct />
-      <ShopFeature />
+      <OfferPopularProduct  ref={offerProductRef}/>
+      {/* <ShopFeature /> */}
       <ShopCta />
       <Brands />
       <ShopBanner />

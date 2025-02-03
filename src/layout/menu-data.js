@@ -17,14 +17,21 @@ const menu_data = [
     submenus: [
       { title: 'Hot Water System', link: '/hotwater' },
       { title: 'Air Conditioner', link: '/ac' },
-      // { title: 'Solar Panel ', link: '/solar-panel' },
+      { title: 'Solar Panel ', link: '/solar-panel' },
       // { title: 'Commercial Hot Water', link: '/hot-water-commercial' },
     ]
   },
+
   {
     id: 4,
-    title: 'FAQs',
-    link: '/faq',
+    hasDropdown: true,
+    title: 'Resources',
+    link: '/about',
+    submenus: [
+      { title: 'FAQs', link: '/faq' },
+      { title: 'Privacy & Policy', link: '/policy' },
+      // { title: 'Commercial Hot Water', link: '/hot-water-commercial' },
+    ]
   },
   // {
   //   id: 4,

@@ -93,166 +93,238 @@
 
 // export default ShopProducts;
 "use client";
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-const WhyChooseUs = () => {
-  const features = [
-    {
-      title: "Customer Focused",
-      description:
-        "Skilled professionals tailor customized plans to suit the needs and requirements of your home.",
+const Achievements = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isSmallMobile, setIsSmallMobile] = useState(window.innerWidth <= 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      setIsSmallMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const styles = {
+    fullWidthContainer: {
+      width: '100%',
+      backgroundColor: '#f8fafc',
+      padding: isSmallMobile ? '40px 0' : '80px 0', // Adjusted padding for mobile
     },
-    {
-      title: "Transparency",
-      description:
-        "From the very first call to getting your certificates, our work would be like an open book to you.",
+    contentContainer: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: isSmallMobile ? '0 10px' : '0 20px', // Adjusted padding for mobile
     },
-    {
-      title: "Flexible Scheduling",
-      description:
-        "We value your time. Call us and book an appointment at your ease.",
+    header: {
+      textAlign: 'center',
+      marginBottom: isSmallMobile ? '30px' : '60px', // Adjusted margin for mobile
     },
-    {
-      title: "Market Knowledge",
-      description:
-        "Our experts possess comprehensive knowledge of the work and the VEU Program Policies.",
+    headerH1: {
+      fontSize: isSmallMobile ? '1.8rem' : isMobile ? '2rem' : '2.8rem',
+      color: '#1e293b',
+      margin: '0 0 15px 0',
+      fontWeight: '700',
     },
-    {
-      title: "Reliability",
-      description:
-        "Trust us when we say, 'No Worries'. Our team of experts works securely, patiently, and strives to deliver the very best for you.",
+    headerUnderline: {
+      width: '80px',
+      height: '4px',
+      backgroundColor: '#007bff',
+      margin: '0 auto',
+      borderRadius: '2px',
     },
-    {
-      title: "Integrity",
-      description:
-        "We take pride in our work ethics, with transparency being our core policy.",
+    statsContainer: {
+      display: 'grid',
+      gridTemplateColumns: isSmallMobile ? '1fr' : isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+      gap: isSmallMobile ? '20px' : '30px', // Adjusted gap for mobile
+      marginBottom: isSmallMobile ? '40px' : '80px', // Adjusted margin for mobile
     },
-  ];
+    statCard: {
+      padding: isSmallMobile ? '20px' : '30px', // Adjusted padding for mobile
+      borderRadius: '15px',
+      backgroundColor: 'white',
+      border: '2px solid #007bff',
+      position: 'relative',
+      overflow: 'hidden',
+      transition: 'transform 0.3s ease',
+      ':hover': {
+        transform: 'translateY(-5px)',
+      },
+    },
+    statNumberWrapper: {
+      position: 'relative',
+      marginBottom: '20px',
+    },
+    statNumber: {
+      fontSize: isMobile ? '2.5rem' : '3rem',
+      color: '#007bff',
+      margin: '0',
+      fontWeight: '700',
+      position: 'relative',
+      zIndex: 1,
+    },
+    statCircle: {
+      position: 'absolute',
+      width: '80px',
+      height: '80px',
+      backgroundColor: '#007bff20',
+      borderRadius: '50%',
+      top: '-20px',
+      left: '-20px',
+    },
+    statTitle: {
+      fontSize: isMobile ? '1rem' : '1.1rem',
+      color: '#1e293b',
+      fontWeight: '600',
+      margin: '0 0 12px 0',
+      textTransform: 'uppercase',
+    },
+    statDescription: {
+      fontSize: isMobile ? '0.9rem' : '1rem',
+      color: '#64748b',
+      lineHeight: '1.6',
+    },
+    testimonialsContainer: {
+      display: 'grid',
+      gridTemplateColumns: isSmallMobile ? '1fr' : isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+      gap: isSmallMobile ? '20px' : '30px', // Adjusted gap for mobile
+    },
+    testimonialCard: {
+      padding: isSmallMobile ? '20px' : isMobile ? '30px' : '40px', // Adjusted padding for mobile
+      backgroundColor: 'white',
+      borderRadius: '15px',
+      position: 'relative',
+      boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
+      minHeight: isSmallMobile ? 'auto' : isMobile ? '250px' : '300px', // Adjusted height for mobile
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    },
+    quoteMark: {
+      fontSize: isMobile ? '3rem' : '4rem',
+      color: '#007bff',
+      lineHeight: '0.8',
+      marginBottom: '20px',
+      opacity: '0.3',
+    },
+    testimonialText: {
+      fontSize: isMobile ? '1rem' : '1.1rem',
+      color: '#475569',
+      lineHeight: '1.7',
+      marginBottom: '25px',
+    },
+    authorContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '15px',
+    },
+    authorIcon: {
+      width: isMobile ? '40px' : '50px',
+      height: isMobile ? '40px' : '50px',
+      borderRadius: '50%',
+      backgroundColor: '#007bff',
+      color: 'white',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: '600',
+    },
+    authorName: {
+      fontSize: isMobile ? '0.9rem' : '1rem',
+      color: '#1e293b',
+      fontWeight: '600',
+      margin: '0',
+    },
+    authorLocation: {
+      fontSize: isMobile ? '0.8rem' : '0.9rem',
+      color: '#64748b',
+      margin: '0',
+    },
+  };
 
   return (
-    <section className="why-choose-us">
-      <h2 className="section-title">Why Choose Us</h2>
-      <div className="features-grid">
-        {features.map((feature, index) => (
-          <div className="feature-card" key={index}>
-            <div className="icon-wrapper">
-              <span className="check-icon">✔</span>
+    <div style={styles.fullWidthContainer}>
+      <div style={styles.contentContainer}>
+        <div style={styles.header}>
+          <h1 style={styles.headerH1}>OUR ACHIEVEMENTS</h1>
+          <div style={styles.headerUnderline}></div>
+        </div>
+        
+        {/* Statistics Section */}
+        <div style={styles.statsContainer}>
+          <div style={styles.statCard}>
+            <div style={styles.statNumberWrapper}>
+              <h2 style={styles.statNumber}>2070</h2>
+              <div style={styles.statCircle}></div>
             </div>
-            <h3 className="feature-title">{feature.title}</h3>
-            <p className="feature-description">{feature.description}</p>
+            <p style={styles.statTitle}>INSTALLATIONS</p>
+            <p style={styles.statDescription}>Transforming homes with efficient energy systems</p>
           </div>
-        ))}
+          
+          <div style={styles.statCard}>
+            <div style={styles.statNumberWrapper}>
+              <h2 style={styles.statNumber}>1189</h2>
+              <div style={styles.statCircle}></div>
+            </div>
+            <p style={styles.statTitle}>UPGRADED HOMES</p>
+            <p style={styles.statDescription}>Modern solutions for energy-efficient living</p>
+          </div>
+          
+          <div style={{...styles.statCard, borderColor: '#00b4d8'}}>
+            <div style={styles.statNumberWrapper}>
+              <h2 style={{...styles.statNumber, color: '#00b4d8'}}>21+</h2>
+              <div style={{...styles.statCircle, backgroundColor: '#00b4d840'}}></div>
+            </div>
+            <p style={styles.statTitle}>YEARS EXPERIENCE</p>
+            <p style={styles.statDescription}>Trusted industry expertise since 2002</p>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div style={styles.testimonialsContainer}>
+          <div style={styles.testimonialCard}>
+            <div style={styles.quoteMark}>“</div>
+            <p style={styles.testimonialText}>We Can Save helped me understand what to install in my house and get me a big rebate!</p>
+            <div style={styles.authorContainer}>
+              <div style={styles.authorIcon}>AY</div>
+              <div>
+                <p style={styles.authorName}>Alice Young</p>
+                <p style={styles.authorLocation}>NSW Resident</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style={styles.testimonialCard}>
+            <div style={styles.quoteMark}>“</div>
+            <p style={styles.testimonialText}>Now I have a great air conditioner and a smaller energy bill, simply amazing.</p>
+            <div style={styles.authorContainer}>
+              <div style={styles.authorIcon}>AY</div>
+              <div>
+                <p style={styles.authorName}>Alice Young</p>
+                <p style={styles.authorLocation}>VIC Resident</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style={styles.testimonialCard}>
+            <div style={styles.quoteMark}>“</div>
+            <p style={styles.testimonialText}>They taught me innovative ways to generate hot water while saving energy.</p>
+            <div style={styles.authorContainer}>
+              <div style={{...styles.authorIcon, backgroundColor: '#00b4d8'}}>LD</div>
+              <div>
+                <p style={styles.authorName}>Lisa Driver</p>
+                <p style={styles.authorLocation}>Sydney Homeowner</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <style jsx>{`
-        .why-choose-us {
-          padding: 60px 20px;
-          background: var(--tp-grey-17);
-          text-align: center;
-        }
-
-        .section-title {
-          font-size: 36px;
-          font-weight: 700;
-          color: #0d294f;
-          margin-bottom: 40px;
-          position: relative;
-        }
-
-        .section-title::after {
-          content: "";
-          width: 80px;
-          height: 4px;
-          background: #007bff;
-          display: block;
-          margin: 10px auto 0;
-          border-radius: 2px;
-        }
-
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 30px;
-          row-gap: 40px;
-        }
-
-        .feature-card {
-          background:var(--tp-grey-17);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          border-radius: 12px;
-          padding: 20px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .feature-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .icon-wrapper {
-          background: #28a745;
-          color: white;
-          width: 50px;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          font-size: 24px;
-          margin: 0 auto 20px;
-          animation: pulse 1.5s infinite;
-        }
-
-        .feature-title {
-          font-size: 20px;
-          font-weight: 600;
-          color: #0d294f;
-          margin-bottom: 10px;
-        }
-
-        .feature-description {
-          font-size: 16px;
-          color: #555555;
-          line-height: 1.5;
-        }
-
-        @keyframes pulse {
-          0%,
-          100% {
-            transform: scale(1);
-          }
-          50% {
-            transform: scale(1.1);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .section-title {
-            font-size: 28px;
-          }
-
-          .features-grid {
-            grid-template-columns: repeat(1, 1fr);
-          }
-
-          .feature-title {
-            font-size: 18px;
-          }
-
-          .feature-description {
-            font-size: 14px;
-          }
-        }
-
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-      `}</style>
-    </section>
+    </div>
   );
 };
 
-export default WhyChooseUs;
+export default Achievements;

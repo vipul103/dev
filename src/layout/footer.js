@@ -67,7 +67,7 @@ const Footer = () => {
                   title="Company"
                   contents={[
                     { url: "#", title: "Home" },
-                    { url: "#", title: "About us" },
+                    { link: '/about', title: "About us" },
                     { url: "#", title: "Our Product" },
                     { url: "#", title: "FAQs" },
                     { url: "#", title: "Contact Us" },
@@ -81,7 +81,7 @@ const Footer = () => {
                   contents={[
                     { url: "#", title: "Hot Water System" },
                     { url: "#", title: "Air Conditioner" },
-                    // { url: "#", title: "Solar Panel" },
+                    { url: "#", title: "Solar Panel" },
                     // { url: "#", title: "Commercial Hot Water System" },
                   ]}
                 />
@@ -133,11 +133,11 @@ const Footer = () => {
                       <CopyrightText />
                     </div>
                   </div>
-                  <div className="col-sm-6">
+                  {/* <div className="col-sm-6">
                     <div className="footer__payment text-sm-end">
                       <Image src={payment} alt="payment" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
