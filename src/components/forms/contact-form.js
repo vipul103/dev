@@ -239,10 +239,33 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const onSubmit = async (data) => {
+    try {
+      // Convert the data to URL-encoded format
+      const formData = new URLSearchParams();
+      Object.keys(data).forEach(key => {
+        formData.append(key, data[key]);
+      });
+  
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzbFBRLnRloxgP3zdR_0s4sUSXyRCzW7TeqVWq_Jmatj5iUs_nXLyT8Ux_XqCtU_Csv/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
+      });
+  
+      console.log('Form submitted');
+      reset();
+      alert('Thank you for your submission!');
+  
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again.');
+    }
   };
+  
 
   return (
     <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
@@ -436,5 +459,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-
