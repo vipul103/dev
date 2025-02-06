@@ -258,7 +258,7 @@ const Achievements = () => {
         <div style={styles.statsContainer}>
           <div style={styles.statCard}>
             <div style={styles.statNumberWrapper}>
-              <h2 style={styles.statNumber}>2070</h2>
+              <h2 style={styles.statNumber}>2670</h2>
               <div style={styles.statCircle}></div>
             </div>
             <p style={styles.statTitle}>INSTALLATIONS</p>
@@ -292,8 +292,8 @@ const Achievements = () => {
             <div style={styles.authorContainer}>
               <div style={styles.authorIcon}>AY</div>
               <div>
-                <p style={styles.authorName}>Alice Young</p>
-                <p style={styles.authorLocation}>NSW Resident</p>
+                <p style={styles.authorName}>Alexa Young</p>
+                <p style={styles.authorLocation}>NSW</p>
               </div>
             </div>
           </div>
@@ -304,20 +304,20 @@ const Achievements = () => {
             <div style={styles.authorContainer}>
               <div style={styles.authorIcon}>AY</div>
               <div>
-                <p style={styles.authorName}>Alice Young</p>
-                <p style={styles.authorLocation}>VIC Resident</p>
+                <p style={styles.authorName}>Alexa Young</p>
+                <p style={styles.authorLocation}>VIC</p>
               </div>
             </div>
           </div>
           
           <div style={styles.testimonialCard}>
             <div style={styles.quoteMark}>“</div>
-            <p style={styles.testimonialText}>They taught me innovative ways to generate hot water while saving energy.</p>
+            <p style={styles.testimonialText}>I never knew hot water could be genrated in this way.thay taught me a lot about saving energy.</p>
             <div style={styles.authorContainer}>
               <div style={{...styles.authorIcon, backgroundColor: '#00b4d8'}}>LD</div>
               <div>
                 <p style={styles.authorName}>Lisa Driver</p>
-                <p style={styles.authorLocation}>Sydney Homeowner</p>
+                <p style={styles.authorLocation}>Sydney</p>
               </div>
             </div>
           </div>

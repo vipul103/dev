@@ -1,4 +1,5 @@
 "use client";
+import { useState, useCallback } from 'react';
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
@@ -7,6 +8,28 @@ import imgPlaceholder from "@assets/img/photos/1.jpg"; // Replace this with the 
 import heroBg from "@assets/img/banner/bg2.jpg";
 
 export default function EcogenicaPage() {
+  const [rotation, setRotation] = useState({ rotateX: 0, rotateY: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = useCallback((e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    
+    setRotation({
+      rotateX: (y - 0.5) * -20,
+      rotateY: (x - 0.5) * 20
+    });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setRotation({ rotateX: 0, rotateY: 0 });
+    setIsHovered(false);
+  }, []);
   return (
     <Wrapper>
       <Header style_2={true} />
@@ -51,13 +74,29 @@ export default function EcogenicaPage() {
 
               {/* Right Side - Image (4 Columns) */}
               <div className="col-lg-4 text-center">
+              <div 
+                  className="image-3d-container relative"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div
+                    className="image-3d-effect transition-transform duration-300 ease-out"
+                    style={{
+                      transform: `perspective(1000px) rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg) scale(${isHovered ? 1.05 : 1})`,
+                      transformStyle: 'preserve-3d',
+                    }}
+                  >
                 <Image
                   src={imgPlaceholder}
                   alt="Ecogenica Heat Pump"
                   className="img-fluid rounded shadow-lg"
                 />
+                 <div className="absolute inset-0 rounded-lg shadow-3d transition-opacity duration-300 opacity-20" />
+                 </div>
               </div>
             </div>
+          </div>
           </div>
         </section>
 
@@ -110,6 +149,31 @@ export default function EcogenicaPage() {
             font-weight: bold;
             margin-bottom: 1rem;
           }
+            .shadow-3d {
+          box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+        }
+        .image-3d-container {
+          perspective: 1000px;
+          transform-style: preserve-3d;
+        }
+        .image-3d-effect {
+          position: relative;
+          transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .image-3d-effect:hover {
+          box-shadow: 20px 20px 40px rgba(0,0,0,0.25);
+        }
+        .image-3d-effect::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+          mix-blend-mode: overlay;
+          pointer-events: none;
+        }
         `}
       </style>
     </Wrapper>

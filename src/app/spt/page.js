@@ -79,8 +79,8 @@
 //     </Wrapper>
 //   );
 // }
-
 "use client";
+import { useState, useCallback } from 'react';
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
@@ -89,6 +89,28 @@ import imgPlaceholder from "@assets/img/photos/bt2.webp"; // Replace this with t
 import heroBg from "@assets/img/banner/bg2.jpg";
 
 export default function sptPage() {
+  const [rotation, setRotation] = useState({ rotateX: 0, rotateY: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = useCallback((e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    
+    setRotation({
+      rotateX: (y - 0.5) * -20,
+      rotateY: (x - 0.5) * 20
+    });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setRotation({ rotateX: 0, rotateY: 0 });
+    setIsHovered(false);
+  }, []);
   return (
     <Wrapper>
       <Header style_2={true} />
@@ -133,13 +155,29 @@ export default function sptPage() {
 
               {/* Right Side - Image (4 Columns) */}
               <div className="col-lg-4 text-center">
+              <div 
+                  className="image-3d-container relative"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div
+                    className="image-3d-effect transition-transform duration-300 ease-out"
+                    style={{
+                      transform: `perspective(1000px) rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg) scale(${isHovered ? 1.05 : 1})`,
+                      transformStyle: 'preserve-3d',
+                    }}
+                  >
                 <Image
                   src={imgPlaceholder}
                   alt="Ecogenica Heat Pump"
                   className="img-fluid rounded shadow-lg"
                 />
+                 <div className="absolute inset-0 rounded-lg shadow-3d transition-opacity duration-300 opacity-20" />
+                 </div>
               </div>
             </div>
+          </div>
           </div>
         </section>
 

@@ -89,7 +89,7 @@
 import Image from "next/image";
 import img1 from "@assets/img/photos/heat.jpg";
 import img2 from "@assets/img/photos/14.webp";
-import img3 from "@assets/img/slider/13/contact.jpg";
+import img3 from "@assets/img/photos/solarcover.jpg";
 import React, { useState, forwardRef } from "react";
 import Link from "next/link";
 
@@ -147,11 +147,11 @@ const SquareImages = forwardRef((props, ref) => {
         onMouseEnter={() => handleMouseEnter("img3")}
         onMouseLeave={handleMouseLeave}
       >
-        <Link href = "/contact">
+        <Link href = "/solar-panel">
         <Image src={img3} alt="Contact Us" layout="fill" objectFit="cover" />
         <div className="overlay">
           <div className="text">
-            <h2>Contact Us</h2>
+            <h2>Solar Panel</h2>
             <p>REDUCE YOUR ELECTRICITY BILLS</p>
           </div>
         </div>
