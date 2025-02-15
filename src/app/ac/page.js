@@ -9,6 +9,7 @@ import imgHotWaterSystem1 from "@assets/img/photos/duct1.1.png";
 import imgHotWaterSystem2 from "@assets/img/photos/multi_split1.1.png";
 import imgHotWaterSystem3 from "@assets/img/photos/split1.1.png";
 import heroBg from "@assets/img/banner/bg2.jpg";
+
 export default function AirConditionerPage() {
   return (
     <Wrapper>
@@ -35,10 +36,20 @@ export default function AirConditionerPage() {
         </div>
       </section>
 
-
       {/* Why Choose Us Section */}
       <section className="why-choose-us">
-        <h2 className="section-title" style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>Types of Heating and Cooling System:</h2>
+        <h2
+          className="section-title"
+          style={{
+            textAlign: "center",
+            fontSize: "2rem",
+            fontWeight: "bold",
+            color: "#1a202c",
+            marginBottom: "1rem",
+          }}
+        >
+          Types of Heating and Cooling System:
+        </h2>
         <div className="container">
           <div className="flip-card-container">
             {/* Left Image */}
@@ -54,7 +65,6 @@ export default function AirConditionerPage() {
                       className="image"
                     />
                   </div>
-
                   <div className="flip-card-back">
                     <h3 className="back-title">Ducted Reverse Cycle</h3>
                     <p className="back-description">
@@ -79,7 +89,9 @@ export default function AirConditionerPage() {
                   />
                 </div>
                 <div className="flip-card-back">
-                  <h3 className="back-title">Multi-Head System Air Conditioner.</h3>
+                  <h3 className="back-title">
+                    Multi-Head System Air Conditioner.
+                  </h3>
                   <p className="back-description">
                     Discover the efficiency of Midea's multi-split system air conditioners! Heat or cool multiple rooms with just one outdoor unit connected to multiple indoor units.
                     Using advanced split system technology, the condenser is placed outside, while the indoor units keep your home perfectly comfortable.
@@ -111,46 +123,204 @@ export default function AirConditionerPage() {
               </div>
             </div>
           </div>
-          <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>How an Energy Efficient Aircon saves you money</h2>
-          <div className="points-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2rem', padding: '1.5rem', backgroundColor: '#f9fafb', borderRadius: '12px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)' }}>
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Lower Energy Bills</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                Energy-efficient air conditioning systems consume less electricity, leading to reduced energy bills.
+          <h2
+            className="section-title"
+            style={{
+              textAlign: "left",
+              fontSize: "2rem",
+              fontWeight: "bold",
+              color: "#1a202c",
+              marginBottom: "1rem",
+            }}
+          >
+            How an Energy Efficient Aircon saves you money
+          </h2>
+          <div
+            className="points-container"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "2rem",
+              padding: "1.5rem",
+              backgroundColor: "#f9fafb",
+              borderRadius: "12px",
+              boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <div
+              className="point"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                borderLeft: "4px solid #3182ce",
+                paddingLeft: "1rem",
+              }}
+            >
+              <h3
+                className="point-title"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "600",
+                  color: "#2d3748",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Lower Energy Bills
+              </h3>
+              <p
+                className="point-description"
+                style={{
+                  fontSize: "1rem",
+                  color: "#4a5568",
+                  lineHeight: "1.6",
+                }}
+              >
+                Energy-efficient air conditioning systems consume less electricity,
+                leading to reduced energy bills.
               </p>
             </div>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Rebates and Incentives</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                The Victorian Energy Upgrade Program provides financial incentives that lower upfront cost of purchasing and installing energy-efficient air conditioning systems.
+            <div
+              className="point"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                borderLeft: "4px solid #3182ce",
+                paddingLeft: "1rem",
+              }}
+            >
+              <h3
+                className="point-title"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "600",
+                  color: "#2d3748",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Rebates and Incentives
+              </h3>
+              <p
+                className="point-description"
+                style={{
+                  fontSize: "1rem",
+                  color: "#4a5568",
+                  lineHeight: "1.6",
+                }}
+              >
+                The Victorian Energy Upgrade Program provides financial incentives
+                that lower upfront cost of purchasing and installing energy-efficient
+                air conditioning systems.
               </p>
             </div>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Improved Comfort</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                These advanced systems offer superior temperature control, ensuring consistent and comfortable cooling while using less energy.
+            <div
+              className="point"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                borderLeft: "4px solid #3182ce",
+                paddingLeft: "1rem",
+              }}
+            >
+              <h3
+                className="point-title"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "600",
+                  color: "#2d3748",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Improved Comfort
+              </h3>
+              <p
+                className="point-description"
+                style={{
+                  fontSize: "1rem",
+                  color: "#4a5568",
+                  lineHeight: "1.6",
+                }}
+              >
+                These advanced systems offer superior temperature control, ensuring
+                consistent and comfortable cooling while using less energy.
               </p>
             </div>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Reduced Carbon Footprint</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                By replacing inefficient units with energy-efficient models, households can significantly decrease their carbon emissions, contributing to a healthier environment.
+            <div
+              className="point"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                borderLeft: "4px solid #3182ce",
+                paddingLeft: "1rem",
+              }}
+            >
+              <h3
+                className="point-title"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "600",
+                  color: "#2d3748",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Reduced Carbon Footprint
+              </h3>
+              <p
+                className="point-description"
+                style={{
+                  fontSize: "1rem",
+                  color: "#4a5568",
+                  lineHeight: "1.6",
+                }}
+              >
+                By replacing inefficient units with energy-efficient models,
+                households can significantly decrease their carbon emissions,
+                contributing to a healthier environment.
               </p>
             </div>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Longer Lifespan</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                Energy-efficient systems often come with advanced technology that reduces wear and tear, leading to fewer repairs and a longer operational life.
+            <div
+              className="point"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                borderLeft: "4px solid #3182ce",
+                paddingLeft: "1rem",
+              }}
+            >
+              <h3
+                className="point-title"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "600",
+                  color: "#2d3748",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Longer Lifespan
+              </h3>
+              <p
+                className="point-description"
+                style={{
+                  fontSize: "1rem",
+                  color: "#4a5568",
+                  lineHeight: "1.6",
+                }}
+              >
+                Energy-efficient systems often come with advanced technology that
+                reduces wear and tear, leading to fewer repairs and a longer operational
+                life.
               </p>
             </div>
           </div>
-
-
-
         </div>
       </section>
 
@@ -200,6 +370,18 @@ export default function AirConditionerPage() {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 2rem;
+        }
+
+        /* Make flip cards stack vertically on mobile */
+        @media (max-width: 768px) {
+          .flip-card-container {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+          }
+          .flip-card {
+            margin-bottom: 2rem;
+          }
         }
 
         .flip-card {
