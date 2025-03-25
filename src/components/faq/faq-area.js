@@ -125,7 +125,7 @@ const FaqArea = ({ element_faq = false }) => {
                       {
                         id: "Three",
                         title: "how do i know  if i am eligible",
-                        desc: "Eligibility depends on the specific goverment scheme and the products you need .contact us (1300 785 436)for a detailed assessment.",
+                        desc: "Eligibility depends on the specific goverment scheme and the products you need .contact us (+1300 685 9586)for a detailed assessment.",
                         parent: "general-1_accordion",
                       },
                       {
@@ -147,7 +147,7 @@ const FaqArea = ({ element_faq = false }) => {
                         id: "five",
                         title: "How do I schedule an install?",
                         show: true,
-                        desc: "you can schedule an installation by conatcting us(1300 785 436)through our website or calling our customer service team",
+                        desc: "you can schedule an installation by conatcting us(+1300 685 958)through our website or calling our customer service team",
                         parent: "general-2_accordion",
                       },
                       {

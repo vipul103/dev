@@ -36,10 +36,10 @@ const BoxItems = () => {
             content={
               <>
                 <p>
-                  <a href="mailto:support@greenenergypowerco.com">wecansaveau@gmail.com</a>
+                  <a href="mailto:Info@wecansave.com.au">Info@wecansave.com.au</a>
                 </p>
                 <p>
-                  <a href="tel:1300785436">+1300785436</a>
+                  <a href="tel:1300785436">+1300 685 958</a>
                 </p>
               </>
             }

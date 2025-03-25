@@ -5,7 +5,7 @@ import { Dashboard, Mobile, Website } from "@svg/index";
  const service_data = [
   {
     icon: <Website />,
-    project: '2',
+    project: '3',
     title: "Listed Products",
   },
   {

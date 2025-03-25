@@ -121,54 +121,40 @@ export default function HotWaterSystem() {
           <br></br>
 
 
-          <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>How a Heat Pump Saves You Money</h2>
-          <div className="points-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2rem', padding: '1.5rem', backgroundColor: '#f9fafb', borderRadius: '12px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)' }}>
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Hot Pump Functioning</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                Heat Pumps work a bit like a reverse refrigerator – transferring heat from the air, through a heat exchange system to heat your water; this is why they are often referred to as ‘air-source Heat Pumps’.
-              </p>
+          <section className="heat-pump-section">
+            <h2 className="section-title">How a Heat Pump Saves You Money</h2>
+            <div className="points-grid">
+              <div className="point-card">
+                <h3 className="point-title">Hot Pump Functioning</h3>
+                <p className="point-description">
+                  Heat Pumps work a bit like a reverse refrigerator – transferring heat from the air, through a heat exchange system to heat your water; this is why they are often referred to as ‘air-source Heat Pumps’.
+                </p>
+              </div>
+              <div className="point-card">
+                <h3 className="point-title">Environmental and Financial Benefits</h3>
+                <p className="point-description">
+                  By concentrating existing heat rather than creating it, Heat Pumps reduce greenhouse gas emissions and energy consumption, offering significant savings for households.
+                </p>
+              </div>
+              <div className="point-card">
+                <h3 className="point-title">Efficiency Compared to Other Systems</h3>
+                <p className="point-description">
+                  Unlike solar systems, Heat Pumps don’t rely on sunlight and operate using electricity. However, they are about four times more efficient than conventional electric water heaters.
+                </p>
+              </div>
             </div>
+          </section>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Environmental and Financial Benefits</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                By concentrating existing heat rather than creating it, Heat Pumps reduce greenhouse gas emissions and energy consumption, offering significant savings for households.
-              </p>
-            </div>
+          <section className="heat-pump-section">
+            <h2 className="section-title">How Does the Heat Pump Work?</h2>
+            <ul className="process-list">
+              <li className="process-step">1 - Heat Pumps draw air in through a fan to an evaporator where the heat in the air is absorbed by a refrigerant.</li>
+              <li className="process-step">2 - The warm air turns the refrigerant from liquid to gas.</li>
+              <li className="process-step">3 - This hot vapor flows through a heat exchanger to heat the water and cool the refrigerant.</li>
+              <li className="process-step">4 - The liquid refrigerant then flows into an expansion valve to reduce its pressure, allowing it to cool and enter the evaporator to repeat the cycle.</li>
+            </ul>
+          </section>
 
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <h3 className="point-title" style={{ fontSize: '1.5rem', fontWeight: '600', color: '#2d3748', marginBottom: '0.5rem' }}>Efficiency Compared to Other Systems</h3>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-                Unlike solar systems, Heat Pumps don’t rely on sunlight and operate using electricity. However, they are about four times more efficient than conventional electric water heaters.
-              </p>
-            </div>
-          </div>
-          <h2 className="section-title" style={{ textAlign: 'left', fontSize: '2rem', fontWeight: 'bold', color: '#1a202c', marginBottom: '1rem' }}>How Does the Heat Pump Work?</h2>
-          <div className="points-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2rem', padding: '1.5rem', backgroundColor: '#f9fafb', borderRadius: '12px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)' }}>
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-               1 -Heat Pumps draw air in through a fan to an evaporator where the heat in the air is absorbed by a refrigerant.
-              </p>
-            </div>
-
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>         
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-              2 -The warm air turns the refrigerant from liquid to gas.
-              </p>
-            </div>
-
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>       
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-              3 -This hot vapor flows through a heat exchanger to heat the water and cool the refrigerant.
-              </p>
-            </div>
-            <div className="point" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', borderLeft: '4px solid #3182ce', paddingLeft: '1rem' }}>       
-              <p className="point-description" style={{ fontSize: '1rem', color: '#4a5568', lineHeight: '1.6' }}>
-              4 -The liquid refrigerant then flows into an expansion valve to reduce its pressure, allowing it to cool and enter the evaporator to repeat the cycle.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -285,7 +271,76 @@ export default function HotWaterSystem() {
   background-color:#fde047;
   color: white;
 }
-
+ .heat-pump-section {
+    width: 100veh;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .point-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .point-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  .point-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+  }
+  .point-description {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.8;
+  }
+  .process-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-step {
+    font-size: 1.1rem;
+    color: #4a5568;
+    padding: 1rem;
+    border-left: 4px solid #3182ce;
+    margin-bottom: 0.8rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    transition: transform 0.2s ease;
+  }
+  .process-step:hover {
+    transform: scale(1.05);
+  }
       `}</style>
     </Wrapper>
   );

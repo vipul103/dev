@@ -92,7 +92,7 @@ const TermsArea = () => {
                   <li>
                     Email:{" "}
                     <span>
-                      <a href="mailto:harry.com">support@harry.com</a>
+                      <a href="mailto:harry.com">Info@wecansave.com.au</a>
                     </span>
                   </li>
                 </ul>

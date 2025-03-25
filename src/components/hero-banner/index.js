@@ -218,7 +218,7 @@ const HeroBanner = ({ onButtonClick }) => {  // Add onButtonClick prop
               <div className="row align-items-center">
                 <div className="col-xl-6 col-lg-6 col-md-12">
                   <div className="slider__content-13">
-                    <span className="slider__title-pre-13">{item.pre_title}</span>
+                    <span className="slider__title-pre-13 text-black">{item.pre_title}</span>
                     <h3 className="slider__title-13">{item.title}</h3>
                     <div className="slider__btn-13 mt-4">
                       {/* Replace Link with button */}

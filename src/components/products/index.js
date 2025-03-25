@@ -92,239 +92,208 @@
 // };
 
 // export default ShopProducts;
-"use client";
-import React, { useState, useEffect } from 'react';
+import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const Achievements = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [isSmallMobile, setIsSmallMobile] = useState(window.innerWidth <= 480);
+export default function GridPage() {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-      setIsSmallMobile(window.innerWidth <= 480);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    setIsVisible(true);
   }, []);
 
-  const styles = {
-    fullWidthContainer: {
-      width: '100%',
-      backgroundColor: '#f8fafc',
-      padding: isSmallMobile ? '40px 0' : '80px 0', // Adjusted padding for mobile
-    },
-    contentContainer: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: isSmallMobile ? '0 10px' : '0 20px', // Adjusted padding for mobile
-    },
-    header: {
-      textAlign: 'center',
-      marginBottom: isSmallMobile ? '30px' : '60px', // Adjusted margin for mobile
-    },
-    headerH1: {
-      fontSize: isSmallMobile ? '1.8rem' : isMobile ? '2rem' : '2.8rem',
-      color: '#1e293b',
-      margin: '0 0 15px 0',
-      fontWeight: '700',
-    },
-    headerUnderline: {
-      width: '80px',
-      height: '4px',
-      backgroundColor: '#007bff',
-      margin: '0 auto',
-      borderRadius: '2px',
-    },
-    statsContainer: {
-      display: 'grid',
-      gridTemplateColumns: isSmallMobile ? '1fr' : isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
-      gap: isSmallMobile ? '20px' : '30px', // Adjusted gap for mobile
-      marginBottom: isSmallMobile ? '40px' : '80px', // Adjusted margin for mobile
-    },
-    statCard: {
-      padding: isSmallMobile ? '20px' : '30px', // Adjusted padding for mobile
-      borderRadius: '15px',
-      backgroundColor: 'white',
-      border: '2px solid #007bff',
-      position: 'relative',
-      overflow: 'hidden',
-      transition: 'transform 0.3s ease',
-      ':hover': {
-        transform: 'translateY(-5px)',
-      },
-    },
-    statNumberWrapper: {
-      position: 'relative',
-      marginBottom: '20px',
-    },
-    statNumber: {
-      fontSize: isMobile ? '2.5rem' : '3rem',
-      color: '#007bff',
-      margin: '0',
-      fontWeight: '700',
-      position: 'relative',
-      zIndex: 1,
-    },
-    statCircle: {
-      position: 'absolute',
-      width: '80px',
-      height: '80px',
-      backgroundColor: '#007bff20',
-      borderRadius: '50%',
-      top: '-20px',
-      left: '-20px',
-    },
-    statTitle: {
-      fontSize: isMobile ? '1rem' : '1.1rem',
-      color: '#1e293b',
-      fontWeight: '600',
-      margin: '0 0 12px 0',
-      textTransform: 'uppercase',
-    },
-    statDescription: {
-      fontSize: isMobile ? '0.9rem' : '1rem',
-      color: '#64748b',
-      lineHeight: '1.6',
-    },
-    testimonialsContainer: {
-      display: 'grid',
-      gridTemplateColumns: isSmallMobile ? '1fr' : isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
-      gap: isSmallMobile ? '20px' : '30px', // Adjusted gap for mobile
-    },
-    testimonialCard: {
-      padding: isSmallMobile ? '20px' : isMobile ? '30px' : '40px', // Adjusted padding for mobile
-      backgroundColor: 'white',
-      borderRadius: '15px',
-      position: 'relative',
-      boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
-      minHeight: isSmallMobile ? 'auto' : isMobile ? '250px' : '300px', // Adjusted height for mobile
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    },
-    quoteMark: {
-      fontSize: isMobile ? '3rem' : '4rem',
-      color: '#007bff',
-      lineHeight: '0.8',
-      marginBottom: '20px',
-      opacity: '0.3',
-    },
-    testimonialText: {
-      fontSize: isMobile ? '1rem' : '1.1rem',
-      color: '#475569',
-      lineHeight: '1.7',
-      marginBottom: '25px',
-    },
-    authorContainer: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '15px',
-    },
-    authorIcon: {
-      width: isMobile ? '40px' : '50px',
-      height: isMobile ? '40px' : '50px',
-      borderRadius: '50%',
-      backgroundColor: '#007bff',
-      color: 'white',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontWeight: '600',
-    },
-    authorName: {
-      fontSize: isMobile ? '0.9rem' : '1rem',
-      color: '#1e293b',
-      fontWeight: '600',
-      margin: '0',
-    },
-    authorLocation: {
-      fontSize: isMobile ? '0.8rem' : '0.9rem',
-      color: '#64748b',
-      margin: '0',
-    },
-  };
-
   return (
-    <div style={styles.fullWidthContainer}>
-      <div style={styles.contentContainer}>
-        <div style={styles.header}>
-          <h1 style={styles.headerH1}>OUR ACHIEVEMENTS</h1>
-          <div style={styles.headerUnderline}></div>
-        </div>
-        
-        {/* Statistics Section */}
-        <div style={styles.statsContainer}>
-          <div style={styles.statCard}>
-            <div style={styles.statNumberWrapper}>
-              <h2 style={styles.statNumber}>2670</h2>
-              <div style={styles.statCircle}></div>
-            </div>
-            <p style={styles.statTitle}>INSTALLATIONS</p>
-            <p style={styles.statDescription}>Transforming homes with efficient energy systems</p>
-          </div>
-          
-          <div style={styles.statCard}>
-            <div style={styles.statNumberWrapper}>
-              <h2 style={styles.statNumber}>1189</h2>
-              <div style={styles.statCircle}></div>
-            </div>
-            <p style={styles.statTitle}>UPGRADED HOMES</p>
-            <p style={styles.statDescription}>Modern solutions for energy-efficient living</p>
-          </div>
-          
-          <div style={{...styles.statCard, borderColor: '#00b4d8'}}>
-            <div style={styles.statNumberWrapper}>
-              <h2 style={{...styles.statNumber, color: '#00b4d8'}}>21+</h2>
-              <div style={{...styles.statCircle, backgroundColor: '#00b4d840'}}></div>
-            </div>
-            <p style={styles.statTitle}>YEARS EXPERIENCE</p>
-            <p style={styles.statDescription}>Trusted industry expertise since 2002</p>
-          </div>
-        </div>
-
-        {/* Testimonials Section */}
-        <div style={styles.testimonialsContainer}>
-          <div style={styles.testimonialCard}>
-            <div style={styles.quoteMark}>“</div>
-            <p style={styles.testimonialText}>We Can Save helped me understand what to install in my house and get me a big rebate!</p>
-            <div style={styles.authorContainer}>
-              <div style={styles.authorIcon}>AY</div>
-              <div>
-                <p style={styles.authorName}>Alexa Young</p>
-                <p style={styles.authorLocation}>NSW</p>
-              </div>
-            </div>
-          </div>
-          
-          <div style={styles.testimonialCard}>
-            <div style={styles.quoteMark}>“</div>
-            <p style={styles.testimonialText}>Now I have a great air conditioner and a smaller energy bill, simply amazing.</p>
-            <div style={styles.authorContainer}>
-              <div style={styles.authorIcon}>AY</div>
-              <div>
-                <p style={styles.authorName}>Alexa Young</p>
-                <p style={styles.authorLocation}>VIC</p>
-              </div>
-            </div>
-          </div>
-          
-          <div style={styles.testimonialCard}>
-            <div style={styles.quoteMark}>“</div>
-            <p style={styles.testimonialText}>I never knew hot water could be genrated in this way.thay taught me a lot about saving energy.</p>
-            <div style={styles.authorContainer}>
-              <div style={{...styles.authorIcon, backgroundColor: '#00b4d8'}}>LD</div>
-              <div>
-                <p style={styles.authorName}>Lisa Driver</p>
-                <p style={styles.authorLocation}>Sydney</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className={`container ${isVisible ? "fade-in" : ""}`}>
+      <div className="header">
+        <span className="small-title">VEU Program</span>
+        <h2>What is the VEU Program?</h2>
+        <p>
+          This <strong>Victorian Government</strong> program helps businesses and households{" "}
+          <strong>cut power bills</strong> and <strong>reduce greenhouse gas emissions.</strong> 
+          It provides access to discounted <span className="highlight">energy-efficient</span> 
+          products and <span className="highlight">services.</span>
+        </p>
+        <p>
+          The program works by setting a <strong>state-wide</strong> target for{" "}
+          <span className="highlight">energy savings</span> that result in a range of 
+          energy-efficient products and services being made available to 
+          <strong> homes</strong> and <strong>businesses</strong> at a discount.
+        </p>
       </div>
+
+      <div className="cards">
+        {[
+          { step: "01", title: "Register Interest", desc: "Submit Your Details For Eligibility" },
+          { step: "02", title: "Book Installation", desc: "Our qualified experts will reach out" },
+          { step: "03", title: "Enjoy The Savings", desc: "See the savings & energy efficiency!" }
+        ].map((item, index) => (
+          <div key={index} className="card">
+            <span className="step-number">{item.step}</span>
+            <span className="step-text">| step</span>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+            <Link href="/contact">
+              <div className="arrow-button">
+                <FaArrowRight />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <div className="our-services">
+        <h2>Our Services</h2>
+      </div>
+
+      <style jsx>{`
+        .container {
+          text-align: center;
+          padding: 50px 20px;
+          background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+        }
+        
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+
+        .header {
+          max-width: 800px;
+          margin: 0 auto 40px;
+          opacity: 0;
+          transform: translateY(20px);
+          animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .small-title {
+          color: #8cc63f;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 30px;
+          font-weight: 800;
+          margin: 10px 0;
+          color: #333;
+        }
+
+        p {
+          font-size: 16px;
+          color: #555;
+          line-height: 1.6;
+        }
+
+        .highlight {
+          color: #00a5e0;
+          font-weight: bold;
+        }
+
+        .cards {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          margin-top: 20px;
+        }
+
+        .card {
+          background: white;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          width: 300px;
+          position: relative;
+          text-align: left;
+          transform: scale(0.9);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          opacity: 0;
+          animation: fadeInUp 1s forwards;
+        }
+
+        .card:hover {
+          transform: scale(1);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-number {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 50px;
+          font-weight: 800;
+          color: rgba(0, 0, 0, 0.05);
+        }
+
+        .step-text {
+          color: #8cc63f;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+
+        .arrow-button {
+          width: 50px;
+          height: 50px;
+          background: #008bd3;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          cursor: pointer;
+          transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .arrow-button:hover {
+          background: #005f8a;
+          transform: scale(1.1);
+        }
+
+        .our-services {
+          width: 100%;
+          text-align: center;
+          margin-top: 50px;
+          padding: 30px 0;
+        }
+
+        .our-services h2 {
+          font-size: 28px;
+          font-weight: bold;
+          color: #333;
+        }
+
+        @media (max-width: 768px) {
+          .cards {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      `}</style>
     </div>
   );
-};
-
-export default Achievements;
+}

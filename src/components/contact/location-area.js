@@ -66,8 +66,8 @@ const LocationArea = () => {
               <SingleLocationItem
                 title="Australia Office"
                 icon={location_icon_1}
-                location="support@greenenergypowerco.com"
-                tel="1300785436"
+                location="Info@wecansave.com.au"
+                tel="+1300 685 958"
               />
             </div>
           </div>
